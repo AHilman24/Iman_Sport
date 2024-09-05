@@ -13,7 +13,7 @@
 
                             <div class="box">
                                 <div class="box-header with-border">
-                                    <h3 class="box-title">Data Kategori</h3>
+                                    <h3 class="box-title">Data Pesanan</h3>
                                 </div>
                                 <!-- /.box-header -->
                                 <div class="box-body">
@@ -24,6 +24,7 @@
                                                     <th>No</th>
                                                     <th>Tanggal Pesanan</th>
                                                     <th>Total Belanja</th>
+                                                    <th>Metode Pembayaran</th>
                                                     <th>Opsi</th>
                                                 </tr>
                                             </thead>
@@ -33,6 +34,7 @@
                                                         <td>{{ $key + 1 }}</td>
                                                         <td>{{ $item->created_at->format('d F Y ') }}</td>
                                                         <td>{{ $item->total_bayar }}</td>
+                                                        <td>{{ $item->metode_bayar }}</td>
                                                         <td>
                                                             
                                                             <a href="/detail-pesanan/{{ $item->id }}"

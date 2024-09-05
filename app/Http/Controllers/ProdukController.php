@@ -56,7 +56,8 @@ class ProdukController extends Controller
         if ($validasi) {
             FacadesAlert::success('Berhasil','Data Berhasil Di Tambahkan')
                 ->showConfirmButton('ok')
-                ->autoClose(false);
+                ->toast()
+                ->autoClose(3000);
             return redirect('/produk');
         }
     }
@@ -101,7 +102,8 @@ class ProdukController extends Controller
         if ($validasi) {
             FacadesAlert::success('Berhasil','Data Berhasil Di Ubah')
                 ->showConfirmButton('ok')
-                ->autoClose(false);
+                ->toast()
+                ->autoClose(3000);
             return redirect('/produk');
         }else {
             return redirect()->back();
@@ -117,7 +119,8 @@ class ProdukController extends Controller
             }
             FacadesAlert::success('Berhasil','Data Berhasil Di Hapus')
                 ->showConfirmButton('ok')
-                ->autoClose(false);
+                ->toast()
+                ->autoClose(3000);
             return redirect('/produk');
         }
     }

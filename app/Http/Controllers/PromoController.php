@@ -7,6 +7,8 @@ use App\Http\Requests\StorePromoRequest;
 use App\Http\Requests\UpdatePromoRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert as FacadesAlert;
+
 
 class PromoController extends Controller
 {
@@ -37,6 +39,10 @@ class PromoController extends Controller
             'foto' => $fileName,
         ]);
         if ($validasi) {
+            FacadesAlert::success('Berhasil','Data Berhasil Di Tambahkan')
+                ->showConfirmButton('ok')
+                ->toast()
+                ->autoClose(3000);
             return redirect('/slider');
         }
     }
@@ -68,6 +74,10 @@ class PromoController extends Controller
                 'deskripsi' => $request->deskripsi
             ]);
         }
+        FacadesAlert::success('Berhasil','Data Berhasil Di Ubah')
+            ->showConfirmButton('ok')
+            ->toast()
+            ->autoClose(3000);
         return redirect('/slider');
     }
 
@@ -77,6 +87,10 @@ class PromoController extends Controller
         if ($delete) {
             if ($promo->foto) {
                 Storage::delete('foto/'.$promo->foto);
+                FacadesAlert::success('Berhasil','Data Berhasil Di Hapus')
+                    ->showConfirmButton('ok')
+                    ->toast()
+                    ->autoClose(3000);
             }
             return redirect('/slider');
         }

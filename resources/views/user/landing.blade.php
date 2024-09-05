@@ -131,7 +131,7 @@
                                                                         <form action="/cart/{{ $item->id }}"
                                                                             method="post">
                                                                             @csrf
-                                                                            <input type="submit" value="Add Chart"
+                                                                            <input type="submit" value="Add Cart"
                                                                                 class="btn btn-primary">
 
                                                                         </form>
@@ -191,26 +191,26 @@
 
                                                 </div>
                                                 <!-- /.product-info -->
-                                                @<div class="cart clearfix animate-effect">
+                                                <div class="cart clearfix animate-effect">
                                                     <div class="action">
                                                         <ul class="list-unstyled">
                                                             <li class="lnk">
                                                                 <form action="/cart/{{ $item->id }}"
                                                                     method="post">
                                                                     @csrf
-                                                                    <input type="submit" value=""
+                                                                    <input type="submit" value="Add Cart"
                                                                         class="btn btn-primary">
 
                                                                 </form>
                                                             </li>
-                                                            <li class="lnk wishlist"> <a class="add-to-cart"
+                                                            {{-- <li class="lnk wishlist"> <a class="add-to-cart"
                                                                     href="/cart/{produk}" title="Wishlist"> <i
                                                                         class="icon fa fa-heart"></i> </a> </li>
                                                             <li class="lnk"> <a class="add-to-cart"
                                                                     href="/cart" title="Compare"> <i
                                                                         class="fa fa-signal"
                                                                         aria-hidden="true"></i> </a>
-                                                            </li>
+                                                            </li> --}}
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -265,19 +265,19 @@
                                                                 <form action="/cart/{{ $item->id }}"
                                                                     method="post">
                                                                     @csrf
-                                                                    <input type="submit" value=""
+                                                                    <input type="submit" value="Add Cart"
                                                                         class="btn btn-primary">
 
                                                                 </form>
                                                             </li>
-                                                            <li class="lnk wishlist"> <a class="add-to-cart"
+                                                            {{-- <li class="lnk wishlist"> <a class="add-to-cart"
                                                                     href="/cart/{produk}" title="Wishlist"> <i
                                                                         class="icon fa fa-heart"></i> </a> </li>
                                                             <li class="lnk"> <a class="add-to-cart"
                                                                     href="/cart" title="Compare"> <i
                                                                         class="fa fa-signal"
                                                                         aria-hidden="true"></i> </a>
-                                                            </li>
+                                                            </li> --}}
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -332,19 +332,19 @@
                                                                 <form action="/cart/{{ $item->id }}"
                                                                     method="post">
                                                                     @csrf
-                                                                    <input type="submit" value=""
+                                                                    <input type="submit" value="Add Cart"
                                                                         class="btn btn-primary">
 
                                                                 </form>
                                                             </li>
-                                                            <li class="lnk wishlist"> <a class="add-to-cart"
+                                                            {{-- <li class="lnk wishlist"> <a class="add-to-cart"
                                                                     href="/cart/{produk}" title="Wishlist"> <i
                                                                         class="icon fa fa-heart"></i> </a> </li>
                                                             <li class="lnk"> <a class="add-to-cart"
                                                                     href="/cart" title="Compare"> <i
                                                                         class="fa fa-signal"
                                                                         aria-hidden="true"></i> </a>
-                                                            </li>
+                                                            </li> --}}
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -398,19 +398,19 @@
                                                                 <form action="/cart/{{ $item->id }}"
                                                                     method="post">
                                                                     @csrf
-                                                                    <input type="submit" value=""
+                                                                    <input type="submit" value="Add Cart"
                                                                         class="btn btn-primary">
 
                                                                 </form>
                                                             </li>
-                                                            <li class="lnk wishlist"> <a class="add-to-cart"
+                                                            {{-- <li class="lnk wishlist"> <a class="add-to-cart"
                                                                     href="/cart/" title="Wishlist"> <i
                                                                         class="icon fa fa-heart"></i> </a> </li>
                                                             <li class="lnk"> <a class="add-to-cart"
                                                                     href="/cart" title="Compare"> <i
                                                                         class="fa fa-signal"
                                                                         aria-hidden="true"></i> </a>
-                                                            </li>
+                                                            </li> --}}
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -463,19 +463,19 @@
                                                                 <form action="/cart/{{ $item->id }}"
                                                                     method="post">
                                                                     @csrf
-                                                                    <input type="submit" value=""
+                                                                    <input type="submit" value="Add Cart"
                                                                         class="btn btn-primary">
 
                                                                 </form>
                                                             </li>
-                                                            <li class="lnk wishlist"> <a class="add-to-cart"
+                                                            {{-- <li class="lnk wishlist"> <a class="add-to-cart"
                                                                     href="/cart/{produk}" title="Wishlist"> <i
                                                                         class="icon fa fa-heart"></i> </a> </li>
                                                             <li class="lnk"> <a class="add-to-cart"
                                                                     href="/cart" title="Compare"> <i
                                                                         class="fa fa-signal"
                                                                         aria-hidden="true"></i> </a>
-                                                            </li>
+                                                            </li> --}}
                                                         </ul>
                                                     </div>
                                                 </div>

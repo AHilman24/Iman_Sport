@@ -88,10 +88,10 @@
                         <div class="search-area">
                             <form method="post" action="/search">
                                 @csrf
-                                <div class="control-group">
-                                    <input class="search-field" name="cari" placeholder="Search here..." />
+                                <div class="control-group" style="display: flex">
+                                    <input class="search-field form-control" style="height: 45px" name="cari" placeholder="Search here..." />
                                     {{-- <a class="search-button" href="#"></a> --}}
-                                    <button type="submit" class="btn btn-primary">Search</button>
+                                    <button type="submit" class="btn btn-primary" style="margin-left: 150px">Search</button>
                                 </div>
                             </form>
                         </div>

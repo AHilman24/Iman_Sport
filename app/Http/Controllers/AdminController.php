@@ -7,6 +7,7 @@ use App\Http\Requests\StoreAdminRequest;
 use App\Http\Requests\UpdateAdminRequest;
 use App\Models\Kategori;
 use App\Models\Merek;
+use App\Models\Pesanan;
 use App\Models\Produk;
 use App\Models\User;
 
@@ -25,6 +26,8 @@ class AdminController extends Controller
         $data['itung'] = $data['kategori']->count();
         $data['produk'] = Produk::all();
         $data['tung'] = $data['produk']->count();
+        $data['pesanan'] = Pesanan::all();
+        $data['pesan'] = $data['pesanan']->count();
         return view('admin.dashboard',$data);
     }
 

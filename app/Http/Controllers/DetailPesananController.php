@@ -5,15 +5,25 @@ namespace App\Http\Controllers;
 use App\Models\Detail_Pesanan;
 use App\Http\Requests\StoreDetail_PesananRequest;
 use App\Http\Requests\UpdateDetail_PesananRequest;
+use App\Models\Keranjang;
+use App\Models\Pesanan;
+use App\Models\Produk;
+use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DetailPesananController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        //
+    public function detail(Request $request){
+        $data['user'] = Auth::user();
+        $data['produk'] = Produk::find($request->id);
+        $data['barang'] = Produk::all();
+        $data['pesanan'] = Pesanan::find($request->id);
+        $data['keranjang'] = Keranjang::find($request->id);
+        return view('admin.detail-pesanan',$data);
     }
 
     /**

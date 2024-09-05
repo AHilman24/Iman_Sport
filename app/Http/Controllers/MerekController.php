@@ -30,7 +30,8 @@ class MerekController extends Controller
         if ($validasi) {
             FacadesAlert::success('Berhasil','Data Berhasil Di Tambahkan')
                 ->showConfirmButton('ok')
-                ->autoClose(false);
+                ->toast()
+                ->autoClose(3000);
             return redirect('/merek');
         }
         else {
@@ -56,7 +57,8 @@ class MerekController extends Controller
             }
             FacadesAlert::success('Berhasil','Data Berhasil Di Hapus')
                 ->showConfirmButton('ok')
-                ->autoClose(false);
+                ->toast()
+                ->autoClose(3000);
             return redirect('/merek');
         }
     }
@@ -83,7 +85,8 @@ class MerekController extends Controller
             ]);
             FacadesAlert::success('Berhasil','Data Berhasil Di Ubah')
                 ->showConfirmButton('ok')
-                ->autoClose(false);
+                ->toast()
+                ->autoClose(3000);
         }
         else {
             Merek::where('id',$request->id)->update([
@@ -92,7 +95,8 @@ class MerekController extends Controller
             ]);
             FacadesAlert::success('Berhasil','Data Berhasil Di Ubah')
                 ->showConfirmButton('ok')
-                ->autoClose(false);
+                ->toast()
+                ->autoClose(3000);
         }
         return redirect('/merek');
     }

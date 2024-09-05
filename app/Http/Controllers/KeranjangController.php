@@ -13,29 +13,12 @@ use RealRashid\SweetAlert\Facades\Alert as FacadesAlert;
 
 class KeranjangController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    // public function index()
-    // {
-    //     $cartItems = Keranjang::where('user_id', auth()->id())
-    //                       ->with('produk')
-    //                       ->get();
-
-    //     $totalPrice = $cartItems->sum(function ($item) {
-    //     return $item->produk->harga * $item->quantity;
-    // });
-
-    // return view('cart', compact('cartItems', 'totalPrice'));
-    // }
 
     public function addchart(Produk $produk)
     {
         if (!auth()->check()) {
             return redirect()->route('login')->with('error', 'Anda harus login terlebih dahulu');
         }
-
-        // $keranjang = Keranjang::where('user_id', auth()->user()->id)->where('produk_id',$produk->id)->first();
 
         Keranjang::create([
             'user_id' => auth()->user()->id,

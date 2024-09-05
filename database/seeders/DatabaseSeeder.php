@@ -25,10 +25,10 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        // Kategori::factory('20')->create();
-        // Merek::factory('20')->create();
-        // Produk::factory('20')->create();
-        // Promo::factory('5')->create();
+        // Kategori::factory('2')->create();
+        // Merek::factory('2')->create();
+        // Produk::factory('2')->create();
+        // Promo::factory('2')->create();
 
         Admin::create([
             'admin' => 'admin'

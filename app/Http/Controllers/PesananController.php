@@ -10,6 +10,7 @@ use App\Models\Keranjang;
 use App\Models\Produk;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert as FacadesAlert;
 
 
@@ -22,7 +23,7 @@ class PesananController extends Controller
     {
         $data['keranjang'] = Keranjang::all();
         $data['total_keranjang'] = $data['keranjang']->count();
-        $data['cart'] = User::find($request->id);
+        $data['cart'] = Auth::user();
         $data['produk'] = Produk::find($request->id);
         return view('user.checkout',$data);
     }
@@ -46,7 +47,8 @@ class PesananController extends Controller
             'user_id' => auth()->user()->id,
             'produk_id' => $produk['id'],
             'quantity' => 1,
-            'total_bayar' => $produk['harga']
+            'total_bayar' => $produk['harga'],
+            'metode_bayar' => $request->metode_bayar
         ]);
 
         $pesananId = $pesanan->id;
@@ -74,4 +76,6 @@ class PesananController extends Controller
         $data['pesanan'] = Pesanan::all();
         return view('admin.pesanan',$data);
     }
+
+   
 }

@@ -36,15 +36,14 @@
                                     <!-- panel-body  -->
                                     <div class="panel-body">
                                         <div class="row">
-                                            <!-- guest-login -->
-                                            {{-- <div class="col-md-6 col-sm-6 guest-login">
-                                                
-                                            </div> --}}
-                                            <!-- guest-login -->
-
-                                            <!-- already-registered-login -->
+                                            
                                             <div class="col-md-12 col-sm-12 already-registered-login">
-                                                <form class="/checkout/{{ $cart->id }}" role="form">
+                                        
+
+
+                                                <form action="/checkout/proccess" class="register-form" role="form" method="POST" >
+                                                    @csrf
+                                                    
                                                     <div class="form-group">
                                                         <label class="info-title" for="penerima">Nama Penerima </label>
                                                         <input type="text"
@@ -64,37 +63,17 @@
                                                             class="form-control unicase-form-control text-input"
                                                             id="telepon" placeholder=""  value="{{ $cart->no_hp }}">
                                                     </div>
-                                                </form>
-
-
-                                                <form action="/checkout/proccess" class="register-form" role="form" method="POST" >
-                                                    @csrf
-                                                    {{-- <div class="form-group">
-                                                        <label class="info-title ">Pilih Provinsi <span>*</span></label>
-                                                        <select name="" id=""
-                                                            class="form-control form-select">
-                                                            <option value="1">coba</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="info-title ">Pilih Kota/Kabupaten
-                                                            <span>*</span></label>
-                                                        <select name="" id=""
-                                                            class="form-control form-select">
-                                                            <option value="1">coba</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="info-title">Pilih Kecamatan <span>*</span></label>
-                                                        <select name="" id=""
-                                                            class="form-control form-select">
-                                                            <option value="1">coba</option>
-                                                        </select>
-                                                    </div> --}}
                                                     <div class="form-group">
                                                         <label class="info-title" for="exampleInputEmail1">Alamat
                                                             <span>*</span></label>
-                                                        <textarea name="alamat" class="form-control" id="" cols="20" rows="5" placeholder="alamat"></textarea>
+                                                        <textarea name="alamat" class="form-control" id="" cols="20" rows="5" placeholder="alamat" >{{ $cart->alamat }}</textarea>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <select name="metode_bayar" id="" class="form-control">
+                                                            <option value="COD">COD</option>
+                                                            <option value="CashBon">CashBon</option>
+                                                        </select>
+                                                        
                                                     </div>
                                                     <input type="hidden" name="cart" value="{{ json_encode($cart) }}">
                                                     <input type="hidden" name="produk" value="{{ json_encode($produk) }}">
@@ -123,16 +102,13 @@
                                             <div class="mb-2">
                                                 <p class="text" style="font-size: 15px;font-weight: bold">Gambar:</p>
                                                 <img class="img-responsive" alt="" src="{{ asset('storage/foto/'.$produk->foto) }}" style="width: 80px">
-                                                <p class="text" style="font-size: 15px">Kuantitas </p>
+                                                <p class="text" style="font-size: 15px">Kuantitas : 1</p>
                                             </div>
                                             <div class="mb-2">
                                                 <p class="text" style="font-size: 15px;font-weight: bold">Subtotal : Rp. {{ $produk->harga }}</p>
                                             </div>
                                             <div class="mb-2">
                                                 <p class="text" style="font-size: 15px;font-weight: bold">Total Pembayaran : Rp. {{ $produk->harga }}</p>
-                                            </div>
-                                            <div class="mb-2">
-                                                <p class="text" style="font-size: 15px;font-weight: bold">Coba</p>
                                             </div>
                                         </div>
                                     </div>

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->integer('quantity');
             $table->decimal('total_bayar');
+            $table->string('metode_bayar');
             $table->timestamps();
         });
     }

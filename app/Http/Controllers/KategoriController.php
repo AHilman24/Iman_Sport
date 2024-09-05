@@ -22,7 +22,8 @@ class KategoriController extends Controller
         if ($validasi) {
             FacadesAlert::success('Berhasil','Data Berhasil Di Tambahkan')
             ->showConfirmButton('ok')
-            ->autoClose(false);
+            ->toast()
+            ->autoClose(3000);
             return redirect('/kategori');
         }
     }
@@ -33,7 +34,8 @@ class KategoriController extends Controller
         if ($delete) {
             FacadesAlert::success('Berhasil','Data Berhasil Di Hapus')
             ->showConfirmButton('ok')
-            ->autoClose(false);
+            ->toast()
+            ->autoClose(3000);
             return redirect('/kategori');
         }
     }
@@ -57,7 +59,8 @@ class KategoriController extends Controller
         ]);
         FacadesAlert::success('Berhasil','Data Berhasil Di Update')
         ->showConfirmButton('ok')
-        ->autoClose(false);
+        ->toast()
+        ->autoClose(3000);
         return redirect('/kategori');
     }
 }

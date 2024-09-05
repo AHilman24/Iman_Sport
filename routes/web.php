@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BerandaController;
+use App\Http\Controllers\DetailPesananController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\KeranjangController;
 use App\Http\Controllers\MerekController;
@@ -10,6 +11,7 @@ use App\Http\Controllers\PesananController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\PromoController;
 use App\Http\Controllers\UserController;
+use App\Models\Detail_Pesanan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,6 +47,7 @@ Route::middleware(['status'])->group(function(){
     
         //pesanan
         Route::get('/pesanan',[PesananController::class, 'show']);
+        Route::get('/detail-pesanan/{id}',[DetailPesananController::class, 'detail']);
         
         // merek
         Route::get('/merek',[MerekController::class, 'index']);
